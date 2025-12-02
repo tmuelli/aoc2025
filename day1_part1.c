@@ -16,7 +16,7 @@ int main (int argc, char* argv[]) {
     pInput = fopen("./input/day1.txt", "r");
 
     if (pInput == NULL) {
-        return -1;
+        return 1;
     }
 
     while (fgets(line, sizeof(line), pInput)) {
