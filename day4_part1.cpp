@@ -11,7 +11,6 @@ int main (int argc, char* argv[]) {
     char line[256];
     int result = 0;
     std::vector<std::vector<int>> vMatrix;
-    std::vector<std::vector<int>> vTest(ROW_COUNT, std::vector<int>(COL_COUNT, 0));
     std::vector<std::pair<int, int>> vNeighbors = {
         {-1, -1}, {0, -1}, {1, -1},
         {-1, 0}, /*{0, 0},*/ {1, 0},
@@ -65,7 +64,6 @@ int main (int argc, char* argv[]) {
             }
 
             if (neighbor_count < POSSIBLE_ACCESS_COUNT) {
-                vTest[i][j] = 2;
                 result++;
             }
         }
